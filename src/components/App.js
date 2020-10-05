@@ -4,6 +4,8 @@ import youtube from '../api/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 
+const defaultTerm = "buildings";
+
 class App extends React.Component {
 
   state = { videos:[], selectedVideo:null };
@@ -29,7 +31,7 @@ class App extends React.Component {
   render() {
     return(
       <div className="ui container" style={{ marginTop:'10px' }}>
-        <SearchBar onTermSubmit={this.onTermSubmit}/>
+        <SearchBar onTermSubmit={this.onTermSubmit} defaultTerm={defaultTerm}/>
         <div className="ui grid">
           <div className="ui row">
             <div className="eleven wide column">

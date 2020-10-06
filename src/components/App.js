@@ -28,6 +28,8 @@ class App extends React.Component {
     this.setState({ selectedVideo:video });
   };
 
+
+
   render() {
     return(
       <div className="ui container" style={{ marginTop:'10px' }}>
@@ -38,7 +40,7 @@ class App extends React.Component {
               <VideoDetail video={this.state.selectedVideo}/>
             </div>
             <div className="five wide column">
-              <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect}/>
+              <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect} onTermSubmit={this.onTermSubmit}/>
             </div>
           </div>
         </div>
